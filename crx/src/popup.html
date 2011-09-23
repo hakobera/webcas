@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'/>
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+header a {
+  margin-right: 20px;
+}
+
+section img {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #999;
+}
+</style>
+<script src="vendor/jquery-1.6.2.js"></script>
+<script>
+$(function() {
+  var dataUrl = '';
+  chrome.windows.getCurrent(function (win) {
+    chrome.tabs.captureVisibleTab(win.id, { "format": "png" }, function(imgUrl) {
+      var img = document.getElementById('img');
+      dataUrl = imgUrl;
+      img.src = imgUrl;
+    });
+  });
+
+  $('#createRakugaki').click(function() {
+    chrome.extension.getBackgroundPage().postScreenShot(dataUrl);
+    window.close();
+  });
+});
+</script>
+</head>
+<body>
+<header>
+  <h1>Use this?
+    <a href="javascript:void(0);" id="createRakugaki">Yes, Let's Rakugaking!!</a>
+    <a href="javascript:window.close();">No</a>
+  </h1>
+</header>
+<section>
+  <img id="img" src="images/white.png"/>
+</section>
+</body>
+</html>

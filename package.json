@@ -1,0 +1,11 @@
+{
+    "name": "webcas"
+  , "version": "0.0.1"
+  , "author": "Kazuyuki Honda <hakobera@gmail.com>"
+  , "dependencies": {
+      "connect": "1.7.1"
+    , "log4js": "*"
+    , "socket.io": "0.8.4"
+    , "knox": "0.0.9"
+  }
+}

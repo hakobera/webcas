@@ -1,0 +1,90 @@
+/**
+ * Base
+ */
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+canvas {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Layout
+ *
+ */
+header {
+  padding: 5px 10px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+footer {
+  padding: 5px 10px;
+  color: #666;
+  font-size: 10px;
+  text-align: right;
+}
+
+.content {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/**
+ * Draw
+ */
+#cnavasBox {
+  padding: 10px;
+}
+
+#screen {
+  position: relative;
+}
+
+#baseLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: solid 1px #aaa;
+}
+
+#drawLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/**
+ * Rakugaki List
+ */
+.rakugakies {
+  width: 80%;
+  margin-left: 20px;
+  font-size: 32px;
+}
+
+.rakugakies td {
+  padding-top: 10px;
+  border-top: solid 2px #999;
+}
+
+/**
+ * Share buttons
+ */
+#shares {
+  position: absolute;
+  top: 15px;
+  left: 150px;
+}

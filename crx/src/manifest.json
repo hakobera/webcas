@@ -1,0 +1,16 @@
+{
+  "name": "webcas",
+  "version": "1.0",
+  "description": "Get screenshot and broadcast it",
+  "background_page": "background.html",
+  "browser_action": {
+    "default_icon": "images/icon19.png",
+    "default_title": "ScreenShot"
+  },
+  "icons": {
+    "16":  "images/icon16.png",
+    "19":  "images/icon19.png",
+    "128": "images/icon128.png"
+  },
+  "permissions": [ "tabs", "http://*/*", "https://*/*", "chrome://*",  "chrome-extension://*" ]
+}
