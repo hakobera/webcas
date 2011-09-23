@@ -1,6 +1,6 @@
 $(function() {
   var screen = $('#screen');
-  var socket = io.connect('http://localhost:3001');
+  var socket = io.connect('http://xxxsocket.org:3001');
 
   socket.on('con', function() {
     console.log('connected');
