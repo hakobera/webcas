@@ -3,6 +3,7 @@
   "version": "1.0",
   "description": "Get screenshot and broadcast it",
   "background_page": "background.html",
+  "options_page": "options.html",
   "browser_action": {
     "default_icon": "images/icon19.png",
     "default_title": "ScreenShot"
@@ -12,5 +13,5 @@
     "19":  "images/icon19.png",
     "128": "images/icon128.png"
   },
-  "permissions": [ "tabs", "http://*/*", "https://*/*", "chrome://*",  "chrome-extension://*" ]
+  "permissions": [ "tabs", "http://*/*", "https://*/*" ]
 }

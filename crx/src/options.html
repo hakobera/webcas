@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>WebCas Options</title>
+  <link rel="stylesheet" href="stylesheets/bootstrap.css"/>
+  <script src="javascripts/jquery-1.6.4.js"></script>
+  <script src="javascripts/options.js"></script>
+</head>
+<body style="padding: 30px 0;">
+<div class="container" style="width: 600px;">
+  <h1 style="margin-bottom: 40px;">WebCas Settings</h1>
+  <form>
+    <fieldset style="position: relative;">
+      <div class="clearfix" style="position: absolute; top: -30px; left:0; width: 600px;">
+        <div id="messageBox" class="alert-message success" style="display: none;">
+          <a id="closeMessage" class="close" href="#">x</a>
+          <p id="message"></p>
+        </div>
+      </div>
+      <div class="clearfix">
+        <label>WebCas Server URL</label>
+        <div class="input">
+          <input type="url" id="server" class="xlarge" required="true" placeholder="WebCas Server URL" autofocus="autofocus" />
+        </div>
+      </div>
+    </fieldset>
+    <div class="actions">
+      <button class="btn primary">Save</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
