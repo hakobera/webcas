@@ -16,7 +16,7 @@ var io = require('socket.io').listen(port + 1);
 
 io.sockets.on('connection', function (socket) {
   console.log(socket.id);
-  socket.emit('con', { id: socket.id });
+  socket.emit('connected', { id: socket.id });
 
   socket.on('cast', function(data) {
     var dataUrl = data.dataUrl
@@ -32,6 +32,7 @@ io.sockets.on('connection', function (socket) {
       s3req.on('response', function(s3res) {
         if (s3res.statusCode === 200) {
           console.log('saved to %s', s3req.url);
+          socket.emit('saved', { url: s3req.url + '?t=' + new Date().getTime() });
           socket.broadcast.volatile.emit('update', { url: s3req.url + '?t=' + new Date().getTime() });
         } else {
           console.log('Screenshot image cannot save');
